@@ -1,0 +1,50 @@
+<!--
+ - main.html
+ -
+ -Author: Ryan Gourley
+ - Date: 11 July 2014
+ -
+ - Functionality: Main view
+ - Use: Run the local Angular app by following the instructions in the comments from client/index/html
+ -
+ -->
+<div ng-controller="MainCtrl">
+	<div class="well">
+	  <ul ng-repeat="item in list">
+	  	<li>{{item}}</li>
+	  </ul>
+	</div>
+	<div class="row">
+		<div class="col-xs-6">
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+					<ul class="dropdown-menu" role="menu">
+	          <li ng-click="getit()"><a>GET</a></li>
+	          <li ng-click="getall()"><a>GET ALL</a></li>
+	          <li ng-click="postit()"><a>POST</a></li>
+	          <li ng-click="deleteit()"><a>DELETE</a></li>
+	        </ul>
+				</div>
+				<input type="text" class="form-control" ng-model="inputvar" placeholder="GET, POST, DELETE, PUT From"></input>
+			</div>
+			<br>
+			<div class="input-group">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Change <span class="caret"></span></button>
+					<ul class="dropdown-menu" role="menu">
+						<li ng-click="putit()"><a>PUT</a></li>
+					</ul>
+				</div>
+				<input type="text" class="form-control" ng-model="tovar" placeholder="PUT To"></input>
+			</div>
+		</div>
+		<div class="col-xs-6">
+			<ul ng-repeat="request in CRUDHeaders track by $index">
+				<li>{{request}}</li>
+			</ul>
+		</div>
+	</div>
+
+
+</div>

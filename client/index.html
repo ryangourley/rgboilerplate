@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+	- rgBoilerPlate
+	- Developed and Tested by: Ryan Gourley
+	- Current Version: 0.0.1
+	- Last Edit (Http Headers on July 11th 2014)
+	-
+	- Initial Setup:
+	- 	Requirements: Node JS ~0.10.x (with npm)
+	-		>>cd server
+	- 	>>npm install
+	-
+	- Run with localhost server on port 8080 (Recommended)
+	-  >>node server/server.js
+	-
+	-  In-Browser Run (Purely JavaScript on the Client)
+	-  //PLEASE NOTE THAT THE HTML REQUESTS WILL NOT WORK AND CAN NOT BE ROUTED
+	-  		To run without the server, please edit the following file:
+	-  		client/scripts/app.js
+	-  
+	-  		Change the following line
+	-  		"$locationProvider.html5Mode(true);"
+	-  		to read "$locationProvider.html5Mode(false);"
+	-  
+	-  		To run the local file, just double click the index file, or run
+	-  		>>client/index.html
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>rgBoilerplate</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+	</head>
+	<body ng-app="rgApp">
+		<!-- Twitter Bootstrap Container -->
+		<div class="container">
+			<div class="jumbotron">
+				<h3>rgBoilerplate<span class="glyphicon glyphicon-leaf"></span></h3>
+			</div>
+			<!-- Angular View Routing -->
+			<div ng-view=''></div><br><br>
+			<!-- Footer -->
+			<div class="footer">
+        <h5><span class="glyphicon glyphicon-wrench"></span> rgBoilerplate Team</h5>
+      </div>
+		</div>
+    <!-- Angular Modules -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/angular-animate/angular-animate.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="vendor/angular-cookies/angular-cookies.js"></script>
+    <!-- JQuery Modules -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/jquery-ui/ui/jquery-ui.js"></script>
+    <!-- Other Modules -->
+    <script src="vendor/json3/lib/json3.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- Client Javascript -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/mainctrl.js"></script>
+    <script src="scripts/services/main_http.js"></script>
+	</body>
+</html>
